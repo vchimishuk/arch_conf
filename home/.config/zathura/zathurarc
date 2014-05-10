@@ -1,0 +1,33 @@
+# TODO: C-[ as Escape.
+# TODO: Regular (not bold) font in completion suggestions list.
+
+set font "Terminus normal 10"
+
+# map n-completion-items 15
+
+set completion-fg "#aaaaaa"
+set completion-bg "#2d2d2d"
+set completion-group-fg "#aaaaaa"
+set completion-group-bg "#2d2d2d"
+set completion-highlight-fg "#bbbbbb"
+set completion-highlight-bg "#3a3a3a"
+set default-fg "#aaaaaa"
+set default-bg "#3a3a3a"
+set inputbar-fg "#aaaaaa"
+set inputbar-bg "#2d2d2d"
+# notification-fg
+# notification-bg
+# notification-error-fg
+# notification-error-bg
+# notification-warning-fg
+# notification-warning-bg
+# tabbar-bg
+# tabbar-fg
+# tabbar-focus-bg
+# tabbar-focus-fg
+set statusbar-fg "#aaaaaa"
+set statusbar-bg "#2d2d2d"
+# statusbar-v-padding
+# statusbar-h-padding
+
+# set guioptions csv
