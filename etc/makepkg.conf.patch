@@ -1,0 +1,11 @@
+--- makepkg.conf	2014-02-16 16:26:58.331290395 +0200
++++ makepkg.conf~	2013-12-24 23:27:54.000000000 +0200
+@@ -34,7 +34,7 @@ CFLAGS="-march=i686 -mtune=generic -O2 -
+ CXXFLAGS="-march=i686 -mtune=generic -O2 -pipe -fstack-protector --param=ssp-buffer-size=4"
+ LDFLAGS="-Wl,-O1,--sort-common,--as-needed,-z,relro"
+ #-- Make Flags: change this for DistCC/SMP systems
+-MAKEFLAGS="-j4"
++#MAKEFLAGS="-j2"
+ #-- Debugging flags
+ DEBUG_CFLAGS="-g -fvar-tracking-assignments"
+ DEBUG_CXXFLAGS="-g -fvar-tracking-assignments"
