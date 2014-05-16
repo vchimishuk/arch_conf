@@ -1,0 +1,9 @@
+keycode 108 = Alt_R
+! keysym XF86Back = Page_Up
+! keysym XF86Forward = Page_Down
+! keysym XF86AudioForward = End
+! keysym XF86AudioRewind = Home
+keycode 167 = Page_Down
+keycode 166 = Page_Up
+keycode 173 = Home
+keycode 171 = End

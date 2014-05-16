@@ -4,7 +4,7 @@ DEFAULT_SESSION=awesome
 xrdb -merge ~/.Xresources
 numlockx on
 setxkbmap -layout us,ru,ua -variant ,winkeys,winkeys -option grp:alt_shift_toggle,grp:alt_shift_toggle_bidir,terminate:ctrl_alt_bksp,compose:ralt
-xmodmap -e "keycode 108 = Alt_R"
+xmodmap ~/.Xmodmap
 
 case $1 in
     openbox)
@@ -26,4 +26,3 @@ case $1 in
 	exec $DEFAULT_SESSION
 	;;
 esac
-
