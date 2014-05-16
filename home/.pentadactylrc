@@ -83,8 +83,8 @@ map Б <
 map Ю >
 
 " Search engines.
-map w :open wikipedia
-map W :tabopen wikipedia
+map w :open wikipedia 
+map W :tabopen wikipedia 
 
 " Flashblock plugin configurations.
 loadplugins flashblock
