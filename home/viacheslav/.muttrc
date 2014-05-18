@@ -1,0 +1,79 @@
+#set arrow_cursor			# используем "->" вместо того, чтобы выделять всю строку
+
+# custom formats
+set attribution="On %d, %f wrote:"	# при ответе на письмо пишем эту строчку в начале цитаты
+set index_format="%3C %Z %{%d.%m.%Y %H:%M}  %-25.25n  %s"
+set pager_format="--- %{%d.%m.%Y %H:%M}  %n  %s %|-"
+set status_format="--- Mutt: %f (Msgs:%?M?%M/?%m%?n? New:%n?%?o? Old:%o?%?d? Del:%d?%?F? Flag:%F?%?t? Tag:%t?%?p? Post:%p?%?b? Inc:%b?%?l? %l?) %>- %P ---"
+set folder_format="%2C %t%N  %6s  %d  %f"
+set forward_format="[%a: %s]"           # the default format for the subject of forwarded messages
+
+set signature="~/.mutt/signature"
+
+# abook configurations
+set alias_file="~/.mutt/aliases"
+source "~/.mutt/aliases"
+set query_command="abook --mutt-query '%s'"
+macro index,pager A "<pipe-message>abook --add-email-quiet<return>" "add the sender address to abook"
+
+set move=no				# не спрашивать "Переметить ли прочитаные сообщения"
+set charset="utf-8"			# кодировка терминала
+set copy=yes				# всегда сохранять копии исходящей почты
+set delete=yes				# выбрасывать "удаленные" письма
+#set edit_headers			# редактирование заголовков при создании письма
+#set editor="vim"			# редактор
+set editor="emacsclient -nw"
+set help				# показываем помощь
+set include				# в ответное письмо всегда включаем исходное
+
+set mail_check=3			# как часто проверяем новую почту
+#set mbox=+mbox				# здесь сохраняем прочитанную почту
+set pager_index_lines=6			# количество строк показываемых в пэйджере
+
+#set record=+outbox			# сюда по-умолчанию сохраняем исходящие сообщения
+set reply_to				# Если есть reply-to используем
+set reverse_name			# Используем наш адрес так, как он указан
+					# в сообщении, на которое отвечаем
+# set nosave_empty			# удаляем файл, если в нем не осталось сообщений
+set sort=threads			# метод сортировки
+set sort_browser=reverse-date		# сортировка файлов в браузере каталогов
+
+#set mbox_type=Maildir
+set record="/home/viacheslav/.mail/sent"	#сохранять отправленную почту здесь
+set folder="/home/viacheslav/.mail"
+set spoolfile="/home/viacheslav/.mail/main"	# файл, который проверяем на наличие новой почты, (почтовый ящик МТА)
+mailboxes =main
+mailboxes =golang-nuts
+mailboxes =sent
+
+set send_charset="utf-8"
+set sendmail="/usr/bin/msmtp" # -X /tmp/msmtp.log"
+set use_from=yes
+set realname="Viacheslav Chumushuk"
+set from=voice@root.ua
+set envelope_from=yes
+set followup_to=yes
+set tilde				# рисуем ~ чтобы указать пустые строки
+set nouse_domain			# не дописываем домен
+#set use_mailcap=yes			# всегда используем значения из mailcap. Мой mutt отказался
+					# использовать эту переменную. На всякий случай закомментировали ее.
+set mailcap_path=~/.mutt/mailcap
+alternative_order text/plain text/html
+auto_view text/html
+
+set pgp_verify_sig=no			# не проверяем сигнатуры PGP
+set visual=vim				# редактор, вызываемый по ~v
+
+# запуск fetchmail нажатием кнопки G
+macro index G "!fetchmail\r"
+macro pager G "!fetchmail\r"
+
+macro generic "<esc>1" ":set from=voice@root.ua"
+#macro generic "<esc>2" ":set from=viacheslav88@gmail.com"
+#macro generic "<esc>3" ":set from=voice@linuxforum.org.ua"
+
+macro index M "T.*\n;WN" "Mark all messages as read"
+
+source ~/.mutt/maillists
+source ~/.mutt/colors
+#source ~/.mutt/sidebar

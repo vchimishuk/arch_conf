@@ -1,0 +1,17 @@
+MAILDIR="/home/viacheslav/.mail"
+LOGFILE="$MAILDIR/procmail.log"
+# DEFAULT="$MAILDIR/default"
+DEFAULT="/dev/null"
+
+
+:0:
+* ^To.*golang-nuts
+golang-nuts
+
+:0:
+* ^Mailing-list:.*golang-nuts
+golang-nuts
+
+:0:
+* ^To.*
+main
