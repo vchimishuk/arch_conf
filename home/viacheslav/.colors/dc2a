@@ -1,0 +1,43 @@
+! dc4, a.k.a. darkcourses v. 2
+! vim:ft=xdefaults
+
+*foreground: #8a9199
+*background: #0d131a
+
+! black
+*color0:     #192633
+*color8:     #434c59
+
+! red
+*color1:     #802635
+*color9:     #b3354c
+
+! green
+*color2:     #3f7347
+*color10:    #4ba65a
+
+! yellow
+*color3:     #877c43
+*color11:    #bf9f5f
+
+! blue
+*color4:     #1c678c
+*color12:    #3995bf
+
+! magenta
+*color5:     #684d80
+*color13:    #a64286
+
+! cyan
+*color6:     #337373
+*color14:    #63a6a1
+
+! white
+*color7:     #738080
+*color15:    #aaafb3
+
+
+*color16:    #28394C
+*color17:    #364D66
+*color18:    #1C2613
+

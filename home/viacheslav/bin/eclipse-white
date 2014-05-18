@@ -1,0 +1,3 @@
+#!/bin/bash
+
+GTK2_RC_FILES=~/.themes/Gray-Flat/gtk-2.0/gtkrc eclipse &

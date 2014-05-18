@@ -1,0 +1,15 @@
+#!/bin/bash
+
+USERID=1000
+
+if test -e /tmp/emacs$USERID/server
+then
+	true
+else
+	echo "Starting emacs server..."
+	/usr/bin/emacs --daemon
+
+    while [ ! -e "/tmp/emacs$USERID/server" ] ; do sleep 1 ; done
+fi
+
+emacsclient -c "$@" &
