@@ -1,0 +1,26 @@
+[user]
+	name = Viacheslav Chimishuk
+	email = vchimishuk@yandex.ru
+[core]
+	editor = /home/viacheslav/bin/emacs-git
+[alias]
+	co = checkout
+	cm = commit
+	st = status -s -b
+	br = branch
+	hist = log --pretty=format:\"%h [%an] %ai | %s%d\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+        cdiff = diff --cached
+[color]
+	diff = auto
+	branch = auto
+	interactive = auto
+	status = auto
+	ui = auto
+[apply]
+	whitespace = fix
+[push]
+	default = current
+[credential]
+	helper = cache --timeout=36000000
