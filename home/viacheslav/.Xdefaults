@@ -7,8 +7,6 @@ URxvt*saveLines: 1000
 
 URxvt.url-launcher: /home/viacheslav/bin/fftab
 URxvt.matcher.button: 1
-URxvt.perl-ext-common:	default,matcher,clipboard
-URxvt.keysym.Control-Insert: perl:clipboard:copy
-URxvt.keysym.Shift-Insert: perl:clipboard:paste
+URxvt.perl-ext-common:	default,matcher
 
 #include "/home/viacheslav/.colors/kelmiir"
